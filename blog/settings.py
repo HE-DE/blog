@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'password_reset',
     'article',
     'userprofile',
 ]
@@ -124,3 +125,14 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [(
     os.path.join(BASE_DIR, "static")
 )]
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.163.com'
+EMAIL_HOST_USER = 'fzy4271314@163.com'
+EMAIL_HOST_PASSWORD = 'RGBLSVMWNQJABULY'
+EMAIL_PORT = 25
+EMAIL_USE_TLS = True
+DEFAULT_FROM_EMAIL = '我的博客 <fzy4271314@163.com>'
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
